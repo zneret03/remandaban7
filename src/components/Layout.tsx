@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar, Footer } from "./";
+import { Sidebar, Footer, Contact } from "./";
 
 interface PropTypes {
   children: React.ReactNode;
@@ -12,6 +12,7 @@ const Layout: React.FC<PropTypes> = ({ children }) => {
         <Sidebar />
         <div>{children}</div>
       </div>
+      <Contact />
       <Footer />
     </div>
   );

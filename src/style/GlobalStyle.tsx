@@ -15,9 +15,10 @@ const GlobalStype = createGlobalStyle`
         --pink-slate : #CCAC98;
         --pink : #C9C2BF;
         --white : #DBCFCE;
+        --white-slate : #f7f0f0;
 
-        --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', 'Roboto', -apple-system, system-ui, sans-serif;
-        --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        //--font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', 'Roboto', -apple-system, system-ui, sans-serif;
+        //--font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
         --fz-xxs: 12px;
         --fz-xs: 13px;
