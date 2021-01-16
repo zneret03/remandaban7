@@ -1,10 +1,10 @@
 import React from "react";
 import { LandingPageLogo } from "../icon";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
 import styled from "styled-components";
 
 const StyledHero = styled.section`
+  max-width: 1200px;
   padding: 130px 0 0;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ const StyledHero = styled.section`
   }
 
   h1 {
-    letter-spacing: 0.215em;
+    letter-spacing: var(--letter-spacing);
     max-width: 350px;
     line-height: 82px;
     font-weight: lighter;
@@ -85,7 +85,6 @@ const Hero: React.FC = () => {
         </div>
         <LandingPageLogo />
       </StyledHero>
-      <Footer />
     </>
   );
 };

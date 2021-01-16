@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Facebook, Instagram, Linkedin } from "react-feather";
+import { socialInformation } from "../mock/mockData";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
@@ -25,7 +25,7 @@ const StyledFooter = styled.div`
   }
 
   span {
-    letter-spacing: 0.215em;
+    letter-spacing: var(--letter-spacing);
     color: var(--pink);
 
     @media (max-width: 480px) {
@@ -54,14 +54,12 @@ const StyledFooter = styled.div`
 `;
 
 const Footer: React.FC = () => {
-  const socialStatus = [<Twitter />, <Facebook />, <Instagram />, <Linkedin />];
-
   return (
     <StyledFooter>
       <span>&copy; 2021 JEWELYN REMANDABAN</span>
       <ul>
-        {socialStatus.map((icon: any, index: number) => (
-          <li key={index}>{icon}</li>
+        {socialInformation.map((icon: any, index: number) => (
+          <li key={index}>{icon.icon}</li>
         ))}
       </ul>
     </StyledFooter>

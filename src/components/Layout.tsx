@@ -1,5 +1,6 @@
 import React from "react";
-import GlobalStyle from "../style/GlobalStyle";
+import { Sidebar, Footer } from "./";
+
 interface PropTypes {
   children: React.ReactNode;
 }
@@ -7,8 +8,11 @@ interface PropTypes {
 const Layout: React.FC<PropTypes> = ({ children }) => {
   return (
     <div>
-      <GlobalStyle />
-      <div>{children}</div>
+      <div>
+        <Sidebar />
+        <div>{children}</div>
+      </div>
+      <Footer />
     </div>
   );
 };

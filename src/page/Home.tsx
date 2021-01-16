@@ -1,11 +1,12 @@
-import React from "react";
-import { Layout, Hero } from "../components";
+import React, { Fragment } from "react";
+import { Hero, Footer } from "../components";
 
 const Home: React.FC = () => {
   return (
-    <Layout>
+    <Fragment>
       <Hero />
-    </Layout>
+      <Footer />
+    </Fragment>
   );
 };
 
