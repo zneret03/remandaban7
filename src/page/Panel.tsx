@@ -1,7 +1,12 @@
 import React from "react";
+import { Layout, Projects } from "../components";
 
 const Panel: React.FC = () => {
-  return <div>Panel</div>;
+  return (
+    <Layout>
+      <Projects />
+    </Layout>
+  );
 };
 
 export default Panel;

@@ -30,6 +30,8 @@ const GlobalStype = createGlobalStyle`
 
         --border-radius : 2px;
 
+        --letter-spacing : 0.215em;
+
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
@@ -47,7 +49,7 @@ const GlobalStype = createGlobalStyle`
 
     section {
     margin : 0 auto;
-    max-width: 1150px;
+    max-width: 900px;
     padding: 0 0 200px;
 
     @media (max-width: 1080px) {
