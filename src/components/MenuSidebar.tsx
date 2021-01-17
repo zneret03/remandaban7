@@ -73,8 +73,6 @@ const MenuSidebar: React.FC = () => {
     });
   };
 
-  console.log(block);
-
   useEffect(() => {
     const responsive = () => {
       const xAxis = window.innerWidth < 1080;
@@ -85,9 +83,13 @@ const MenuSidebar: React.FC = () => {
       }
     };
 
+    responsive();
+
     window.addEventListener("resize", responsive);
     return () => window.removeEventListener("resize", responsive);
   }, [block]);
+
+  console.log(block);
 
   return (
     <>
@@ -96,7 +98,7 @@ const MenuSidebar: React.FC = () => {
       </StyledMenu>
       <StyledNavbar
         style={{
-          //display: block ? (toggleSidebar ? "block" : "none") : "block",
+          //display: block ? "block" : "none",
           transform: block
             ? toggleSidebar
               ? "translateX(0%)"
