@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Content } from "../../mock/mockData";
+import { Preview } from "../";
 
 const StyledProjects = styled.section`
   text-align: center;
   padding: 120px 0 200px;
   transition: var(--transition);
+  position: relative;
 
   h1 {
     font-weight: lighter;
@@ -26,7 +28,15 @@ const StyledContent = styled.div`
   }
 
   .project-inner {
+    cursor: pointer;
     margin: 18px 0;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      transform: translateY(-10px);
+    }
 
     img {
       margin-bottom: 13px;
@@ -45,12 +55,31 @@ const StyledContent = styled.div`
 `;
 
 const Projects: React.FC = () => {
+  const [preview, setPreview] = useState<boolean>(false);
+
+  const isPreview = (
+    event: React.MouseEvent<HTMLDivElement | HTMLOrSVGElement, MouseEvent>,
+    id?: number
+  ) => {
+    event.preventDefault();
+    if (!preview) {
+      setPreview(true);
+    } else {
+      setPreview(false);
+    }
+  };
+
   return (
     <StyledProjects>
+      {preview && <Preview close={(event) => isPreview(event)} />}
       <h1>Project</h1>
       <StyledContent>
         {Content.map((content: any) => (
-          <div className="project-inner" key={content.id}>
+          <div
+            className="project-inner"
+            key={content.id}
+            onClick={(event) => isPreview(event, content.id)}
+          >
             <img src={content.image} alt="" />
             <span className="title">{content.title}</span>
           </div>
