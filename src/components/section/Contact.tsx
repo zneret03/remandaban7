@@ -19,6 +19,10 @@ const StyleContact = styled.section`
     color: var(--pink);
     font-size: var(--fz-lg);
     letter-spacing: 0.15em;
+
+    @media (max-width: 780px) {
+      font-size: var(--fz-sm);
+    }
   }
 
   button {

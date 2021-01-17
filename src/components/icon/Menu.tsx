@@ -12,26 +12,26 @@ const Menu: React.FC = () => {
       <path
         d="M1.66663 1.16669H18.3333"
         stroke="#282828"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M1.66663 7H18.3333"
         stroke="#282828"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M1.66663 12.8333H18.3333"
         stroke="#282828"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
