@@ -115,8 +115,6 @@ const MenuSidebar: React.FC = () => {
     return () => window.removeEventListener("resize", responsive);
   }, [block]);
 
-  console.log(block);
-
   return (
     <>
       <StyledMenu onClick={(event) => isToggle(event)}>
