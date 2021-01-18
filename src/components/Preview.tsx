@@ -74,26 +74,26 @@ interface PropTypes {
 const Preview: React.FC<PropTypes> = ({ close, title }) => {
   const filter = onSearch(title, Content);
 
-  console.log(filter);
-
   return (
-    <StyledPreview>
-      <X
-        onClick={(event) => close(event)}
-        className="close"
-        size="30"
-        color="#fff"
-      />
-      {filter.map((data: any) => (
-        <div className="preview" key={data.id}>
-          <img src={data.image} alt="" />
-          <div className="content">
-            <h1>{data.title}</h1>
-            <p>{data.paragraph}</p>
+    <>
+      <StyledPreview>
+        <X
+          onClick={(event) => close(event)}
+          className="close"
+          size="30"
+          color="#fff"
+        />
+        {filter.map((data: any) => (
+          <div className="preview" key={data.id}>
+            <img src={data.image} alt="" />
+            <div className="content">
+              <h1>{data.title}</h1>
+              <p>{data.paragraph}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </StyledPreview>
+        ))}
+      </StyledPreview>
+    </>
   );
 };
 
