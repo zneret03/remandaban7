@@ -5,6 +5,7 @@ export { default as Footer } from "./Footer";
 export { default as Preview } from "./Preview";
 
 /**Section Components */
-export { default as Hero } from "./section/Hero";
-export { default as Projects } from "./section/Projects";
-export { default as Contact } from "./section/Contact";
+export { default as ComponentHero } from "./section/ComponentHero";
+export { default as ComponentProjects } from "./section/ComponentProjects";
+export { default as ComponentStory } from "./section/ComponentStory";
+export { default as ComponentContact } from "./section/ComponentContact";
