@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import { NavbarLogo, Menu } from "./icon";
+import { NavbarLogo } from "./icon";
+import { Menu } from "react-feather";
 import { Sidebar } from "../mock/mockData";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../Context/GlobalProvider";
 import styled from "styled-components";
+import { contact } from "../utils/Reusable";
 
 const StyledNavbar = styled.div`
   position: fixed;
@@ -17,6 +19,7 @@ const StyledNavbar = styled.div`
   div {
     ul {
       padding: 10px 0;
+      font-size: 14px;
 
       a {
         text-decoration: none;
@@ -26,7 +29,6 @@ const StyledNavbar = styled.div`
         color: var(--pink);
         max-width: 100px;
         cursor: pointer;
-        font-size: 14px;
         list-style: none;
         margin: 22px 0;
         text-transform: uppercase;
@@ -35,6 +37,29 @@ const StyledNavbar = styled.div`
         &:hover,
         &:focus {
           color: var(--brown);
+        }
+
+        button {
+          padding: 0;
+          transition: var(--transition);
+          text-transform: uppercase;
+          color: var(--pink);
+          background-color: transparent;
+          border: 1px solid #fff;
+          font-size: 14px;
+          font-family: var(--font-mono);
+          line-height: 1;
+          text-decoration: none;
+          cursor: pointer;
+          letter-spacing: 0.215em;
+          transition: var(--transition);
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--brown);
+            outline: none;
+          }
         }
       }
     }
@@ -50,6 +75,7 @@ const StyledMenu = styled.div`
   cursor: pointer;
   display: none;
   float: right;
+
   transition: var(--transition);
 
   @media (max-width: 1080px) {
@@ -114,6 +140,12 @@ const MenuSidebar: React.FC = () => {
                 <li>{data.name}</li>
               </Link>
             ))}
+            <li>
+              <button onClick={(event) => contact(event)}>Contact</button>
+            </li>
+            <li>
+              <button>Resume</button>
+            </li>
           </ul>
         </div>
       </StyledNavbar>

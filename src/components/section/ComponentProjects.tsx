@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Content } from "../../mock/mockData";
+import { ReusableCSS } from "../../style/ReusableStyle";
 import { Preview } from "../";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Content } from "../../mock/mockData";
 
 const StyledProjects = styled.section`
   text-align: center;
   padding: 120px 0 200px;
   transition: var(--transition);
-  position: relative;
 
   h1 {
-    font-weight: lighter;
-    text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    ${ReusableCSS.header1};
   }
 `;
 
@@ -54,16 +53,18 @@ const StyledContent = styled.div`
   }
 `;
 
-const Projects: React.FC = () => {
+const ComponentProjects: React.FC = () => {
   const [preview, setPreview] = useState<boolean>(false);
+  const [contentTitle, setContentTitle] = useState("");
 
   const isPreview = (
     event: React.MouseEvent<HTMLDivElement | HTMLOrSVGElement, MouseEvent>,
-    id?: number
+    title?: any
   ) => {
     event.preventDefault();
     if (!preview) {
       setPreview(true);
+      setContentTitle(title);
     } else {
       setPreview(false);
     }
@@ -71,16 +72,23 @@ const Projects: React.FC = () => {
 
   return (
     <StyledProjects>
-      {preview && <Preview close={(event) => isPreview(event)} />}
+      {preview && (
+        <Preview close={(event) => isPreview(event)} title={contentTitle} />
+      )}
       <h1>Project</h1>
       <StyledContent>
         {Content.map((content: any) => (
           <div
             className="project-inner"
             key={content.id}
-            onClick={(event) => isPreview(event, content.id)}
+            onClick={(event) => isPreview(event, content.title)}
           >
-            <img src={content.image} alt="" />
+            <LazyLoadImage
+              delayTime={1000}
+              src={content.image}
+              effect="blur"
+              alt="Project Image"
+            />
             <span className="title">{content.title}</span>
           </div>
         ))}
@@ -89,4 +97,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default ComponentProjects;

@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { contact } from "../../utils/Reusable";
 
 const StyleContact = styled.section`
   text-align: center;
   transition: var(--transition);
+
+  @media (max-width: 480px) {
+    padding: 0 20px 200px;
+  }
 
   h1 {
     margin-bottom: 20px;
@@ -54,7 +59,7 @@ const StyleContact = styled.section`
   }
 `;
 
-const Contact: React.FC = () => {
+const ComponentContact: React.FC = () => {
   return (
     <StyleContact>
       <h1>Get In Touch</h1>
@@ -62,9 +67,9 @@ const Contact: React.FC = () => {
         If you have project in mind, why not we get in touch. Lets work
         together. Im available for interesting freelance work. Big or small.
       </p>
-      <button>contact</button>
+      <button onClick={(event) => contact(event)}>contact</button>
     </StyleContact>
   );
 };
 
-export default Contact;
+export default ComponentContact;

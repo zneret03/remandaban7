@@ -1,7 +1,21 @@
 import React from "react";
 import { LandingPageLogo } from "../icon";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const rotate = keyframes`
+ from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
+      
+      to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+      }
+`;
 
 const StyledHero = styled.section`
   max-width: 1200px;
@@ -25,6 +39,7 @@ const StyledHero = styled.section`
   svg {
     transition: var(--transition);
     margin: -100px 0px;
+    animation: ${rotate} 5s linear infinite;
 
     @media (max-width: 1080px) {
       display: none;
@@ -72,14 +87,14 @@ const StyledHero = styled.section`
   }
 `;
 
-const Hero: React.FC = () => {
+const ComponentHero: React.FC = () => {
   return (
     <>
       <StyledHero>
         <div>
           <h1>AR. JEWELYN REMENDAB</h1>
           <h1>AN</h1>
-          <Link to="/panel">
+          <Link to="/project">
             <button>Explore</button>
           </Link>
         </div>
@@ -89,4 +104,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default ComponentHero;

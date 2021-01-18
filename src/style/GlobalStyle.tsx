@@ -10,6 +10,13 @@ const GlobalStype = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     :root {
         --brown : #151515;
         --pink-slate : #CCAC98;

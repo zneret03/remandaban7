@@ -32,22 +32,12 @@ const Sidebar = [
   {
     id: 2,
     name: "Project",
-    link: "",
+    link: "/project",
   },
   {
     id: 3,
     name: "Story",
-    link: "",
-  },
-  {
-    id: 4,
-    name: "Contact",
-    link: "",
-  },
-  {
-    id: 5,
-    name: "Resume",
-    link: "",
+    link: "/story",
   },
 ];
 
@@ -57,46 +47,64 @@ const Content = [
     id: 1,
     title: "LOPEZ ANSESRAL HOUSE",
     image: "/images/1.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 2,
     title: "MISSION JARO APARTMENT",
     image: "/images/2.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 3,
     title: "RUSTU BOHOL COTTAGE",
     image: "/images/3.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 4,
     title: "JEAN-MULIN ALTIER HOUSE",
     image: "/images/4.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 5,
     title: "CHAPTA FURNITURE",
     image: "/images/5.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 6,
     title: "TERRAIN VAGUE",
     image: "/images/6.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 7,
     title: "IRON GATE ESTATE BUILDING",
     image: "/images/7.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 8,
     title: "HOUSING UNITS",
     image: "/images/8.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
   {
     id: 9,
     title: "TIME GARDED IN ILOILO",
     image: "/images/9.jpg",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Dolorpurus non enim praesent elementum. Maecenas pharetra convallis posuere morbi leo urna molestie at",
   },
 ];
 
