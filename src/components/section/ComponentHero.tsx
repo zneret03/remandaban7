@@ -19,7 +19,7 @@ const rotate = keyframes`
 
 const StyledHero = styled.section`
   max-width: 1200px;
-  padding: 130px 0 0;
+  padding: 115px 0 0;
   display: flex;
   justify-content: space-between;
   transition: var(--transition);

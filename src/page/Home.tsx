@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
-import { ComponentHero, Footer } from "../components";
+import { ComponentHero } from "../components";
 
 const Home: React.FC = () => {
   return (
     <Fragment>
       <ComponentHero />
-      <Footer />
     </Fragment>
   );
 };

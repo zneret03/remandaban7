@@ -3,7 +3,7 @@ import { socialInformation } from "../mock/mockData";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-  max-width: 1180px;
+  max-width: 900px;
   margin: 0 auto;
   transition: var(--transition);
   padding: 100px 0 25px;
