@@ -85,6 +85,8 @@ const ComponentProjects: React.FC = () => {
           >
             <LazyLoadImage
               delayTime={1000}
+              threshold={100}
+              useIntersectionObserver={true}
               src={content.image}
               effect="blur"
               alt="Project Image"
